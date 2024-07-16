@@ -1,18 +1,18 @@
-class CartItem {
+class {{#pascalCase}}{{name}}{{/pascalCase}}Item {
   Character? character;
   Map? color;
   String? size;
   int? price;
   int? quantity;
 
-  CartItem(
+  {{#pascalCase}}{{name}}{{/pascalCase}}Item(
       {this.character,
       this.color,
       this.size,
       this.quantity,
       this.price});
 
-  CartItem.fromJson(Map<String, dynamic> json) {
+  {{#pascalCase}}{{name}}{{/pascalCase}}Item.fromJson(Map<String, dynamic> json) {
     character = json['character'] != null ? new Character.fromJson(json['character']) : null;
     color = json['color'];
     size = json['size'];
@@ -32,7 +32,7 @@ class CartItem {
     return data;
   }
 
-  factory CartItem.empty() => CartItem(
+  factory {{#pascalCase}}{{name}}{{/pascalCase}}Item.empty() => {{#pascalCase}}{{name}}{{/pascalCase}}Item(
       character:null,
       size: null,
       color: {},
@@ -40,14 +40,14 @@ class CartItem {
       quantity: 0,
     );
 
-  CartItem copyWith({
+  {{#pascalCase}}{{name}}{{/pascalCase}}Item copyWith({
     Character? character,
     String? size,
     Map? color,
     int? price,
     int? quantity
   }) {
-    return CartItem(
+    return {{#pascalCase}}{{name}}{{/pascalCase}}Item(
     character: character ?? this.character,
     size: size?? this.size,
     color: color?? this.color,
