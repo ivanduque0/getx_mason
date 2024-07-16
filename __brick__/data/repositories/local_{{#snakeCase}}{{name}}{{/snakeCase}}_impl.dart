@@ -1,0 +1,1 @@
+class Local{{#pascalCase}}{{name}}{{/pascalCase}}Implementation extends Local{{#pascalCase}}{{name}}{{/pascalCase}}Interface{}
